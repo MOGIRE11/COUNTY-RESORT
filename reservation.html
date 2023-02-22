@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Form</title>
+    <link rel="stylesheet" href="home.html">
+    
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      
+        .container
+        {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 0;
+        }
+        
+        .navbar
+        {
+            width: 100%;
+            height: 8vh;
+            padding-top: 10px;   
+            margin-bottom: 50px;   
+            border-bottom: 1px solid burlywood; 
+            box-shadow: 2px 2px 3px 0px lightgrey;
+        }
+        .navbar:hover
+        {
+            box-shadow: 2px 2px 3px 0px lightslategrey ;
+            color: black;
+        }
+       .navbar ul{
+            list-style-type: none;
+            display: flex;
+            justify-content: space-evenly;
+            align-items:center;
+            padding: 0;
+            margin: 0;           
+        }
+        .navbar ul a
+        {
+            text-decoration: none;                      
+        }
+        .navbar ul a:hover
+        {
+            text-decoration: underline;
+            color: black;
+            font-weight: bold;
+        }
+        form
+        {
+            width:600px ;
+            height: 75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding-left: 2%;
+            color: #1c1c1c;
+           text-rendering: optimizeLegibility;
+           font-family: cursive;
+        }
+        
+        form:hover
+        {
+            border: 1px solid lightcoral;
+            box-shadow: 2px 2px 9px 1px rgb(189, 105, 105);
+            border-radius: 10px;
+            background-color: aliceblue;
+            color: black;
+            font-family: sans-serif;
+            background: url(img/pink_bg.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-transform: uppercase;
+        }
+        
+        .name
+        {
+            display: flex;
+            gap: 10%;
+        }
+        input[type="text"],input[type="tel"],input[type="number"],input[type="date"]
+        {
+            height: 30px;
+            width: 200px;
+            border:1px solid grey ;
+            text-indent: 1em;
+            font-size: 1em;
+        }
+        input[type="text"]:focus,input[type="tel"]:focus,input[type="number"]:focus,input[type="date"]:focus
+        {
+            outline: none;
+        }
+    
+        #btn
+        {
+            width: 150px;
+            margin-left: 200px;
+            height: 30px;
+            border: 1px solid grey;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: large;
+        }
+        
+        #btn:hover
+        {
+            background-color: blue;
+            color: white;
+            border: 1px solid blue;
+        }
+        
+       
+    </style>
+</head>
+
+<body>
+    
+<div class="container">
+
+    <nav class="navbar">
+        <ul>
+           <li><a href="about.html">About</a></li>
+           <li><a href="branches.html">Branches</a></li>
+           <li><a href="contact.html">Contact</a></li>
+           <li><a href="events.html">Events</a></li>
+           <li><a href="home.html">Home</a></li>
+           <li><a href="kids.html">Kids</a></li>
+           <!-- <li><a href="reservation.html">Reservation</a></li> -->
+           <li><a href="services.html">Services</a></li>
+           <li><a href="suites.html">Suites</a></li>
+           <li><a href="tc.html">Terms</a></li>
+           <li><a href="wed.html">Weddings</a></li>
+        </ul>   
+    </nav>
+  
+   
+    <form action="#">
+        <h2>County Resort Guest Reservation Form</h2>
+        <div class="name">
+            <label for="fname">
+              <b>First Name *</b> <br>
+                <input type="text" id="fname" name="first name" required>
+            </label> 
+            
+            <label for="lname">
+               <b>Last Name*</b> <br>
+                <input type="text" id="lname" name="last name" required>
+            </label>
+        </div>
+        
+        
+        <label for="phone" class="tel">
+            <b>Phone :</b> <br>
+            <input type="tel" id="phone" name="phone">
+        </label>
+        
+        <label for="gender" id="gnd">
+            <b>Gender :</b> <br>
+            Male
+            <input type="radio" id="male" name="gender" value="male"> &nbsp;&nbsp;
+           Female
+            <input type="radio" id="female" name="gender" value="female"> &nbsp;&nbsp;
+            Eljibitikiu
+            <input type="radio" name="gender">
+        </label>
+        
+        <label for="date"><b>Arrival Date :</b> <br>
+            <input type="datetime-local" id="date">
+        </label> 
+        
+        <label for="kids">
+            <b>Number of children :</b> <br>
+            <input type="number" id="kids">
+        </label>
+        
+        <button type="submit" id="btn">Submit</button>
+    </form>
+</div>    
+</body>
+</html>
